@@ -4,20 +4,20 @@
 
 %% INPUTs
 %video ID, according to videoID in the paper, to load viewport traces for this video
-vidID=9;
+vidID=19;
 
 %startTime Offset of video in seconds: according to time offsets in Table 1
 %in the paper; Example 1:40 -> 100
-timeOffsets=0;
+timeOffset=0;
 
 %path to source video: It should be in equirectangular projection
-srcVidPath=['F:\Dataset\videos\',num2str(vidID),'.mp4'];
+srcVidPath=['..\SampleVideos\Source\',num2str(vidID),'.mp4'];
 
 %path to output video
-dstVidPath='0.avi';
+dstVidPath=[num2str(vidID),'.avi'];
 
 %path to viewport traces in the dataset
-tracePath='F:\360dataset\traces\';
+tracePath='..\Traces\';
 
 
 %% Parameters
