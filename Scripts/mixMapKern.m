@@ -10,12 +10,14 @@ for i=ceil(x-s/2):ceil(x+s/2)-1
        if(j<1 || j>size(map,1))
            continue;
        end
+       
+       
        if(i<1)
-           map(j,i+size(map,2))=map(j,i+size(map,2))+kern(ceil(j-y+s/2),ceil(i-x+s/2));
+           map(j,i+size(map,2))=map(j,i+size(map,2))+kern(max(ceil(j-y+s/2),1),max(ceil(i-x+s/2),1));
        elseif(i>size(map,2))
-            map(j,i-size(map,2))=map(j,i-size(map,2))+kern(ceil(j-y+s/2),ceil(i-x+s/2));
+            map(j,i-size(map,2))=map(j,i-size(map,2))+kern(max(ceil(j-y+s/2),1),max(ceil(i-x+s/2),1));
        else
-           map(j,i)=map(j,i)+kern(ceil(j-y+s/2),ceil(i-x+s/2));
+           map(j,i)=map(j,i)+kern(max(ceil(j-y+s/2),1),max(ceil(i-x+s/2),1));
        end
     end
 end
